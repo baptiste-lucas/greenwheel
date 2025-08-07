@@ -3,106 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dons Solidaires</title>
+    <title>Faire un Don</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
         header {
             background-color: #0077cc;
             color: white;
-            padding: 20px 0;
-            text-align: center;
+            padding: 20px;
         }
 
         main {
-            padding: 30px;
-            max-width: 800px;
+            padding: 30px 15px;
+            max-width: 700px;
             margin: auto;
         }
 
-        .palier {
-            background-color: white;
-            border-left: 5px solid #0077cc;
+        .note {
+            font-size: 0.9em;
+            background-color: #e0f0ff;
+            padding: 10px;
+            border-radius: 5px;
             margin-bottom: 20px;
-            padding: 15px 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .montant {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0077cc;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
-            font-size: 1.2em;
-            color: #0077cc;
+            width: 100%;
+            max-width: 300px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #005fa3;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        .note {
-            background-color: #e0f0ff;
-            border: 1px solid #b3d7ff;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 4px;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Soutenez notre projet</h1>
     </header>
 
     <main>
-
         <div class="note">
-            <strong>Note :</strong> Les paliers sont donnés à titre indicatif, vous pouvez donner la somme de votre choix.
+            Les paliers sont donnés à titre indicatif, vous pouvez donner la somme de votre choix.
         </div>
 
-        <div class="palier">
-            <div class="montant">10 €</div>
-            <p>Newsletter exclusive</p>
-        </div>
+        <ul>
+            <li>10 € – Newsletter exclusive</li>
+            <li>20 € – Nom/photo sur la voiture</li>
+            <li>40 € – Carte postale signée</li>
+            <li>60 € – Poster photo A4</li>
+            <li>100 € – Cadeau personnalisé</li>
+            <li>Don libre – Merci !</li>
+        </ul>
 
-        <div class="palier">
-            <div class="montant">20 €</div>
-            <p>Votre nom et photo sur la voiture</p>
+        <div class="btn-container">
+            <a href="https://www.helloasso.com" class="btn">Je fais un don depuis la France</a>
+            <a href="https://www.helloasso.com" class="btn">Je fais un don &lt; 40€ depuis la Belgique</a>
+            <a href="don-belgique.html" class="btn">Je fais un don &gt; 40€ depuis la Belgique</a>
         </div>
-
-        <div class="palier">
-            <div class="montant">40 €</div>
-            <p>Carte postale signée par une famille</p>
-        </div>
-
-        <div class="palier">
-            <div class="montant">60 €</div>
-            <p>Photo de votre choix en format poster A4</p>
-        </div>
-
-        <div class="palier">
-            <div class="montant">100 €</div>
-            <p>Cadeau personnalisé</p>
-        </div>
-
-        <div class="palier">
-            <div class="montant">Don libre</div>
-            <p>Chaque contribution compte. Merci !</p>
-        </div>
-
     </main>
 
     <footer>
-        &copy; 2025 - Votre Nom ou Projet
+        &copy; 2025 - Votre Nom ou Organisation
     </footer>
-
 </body>
 </html>
