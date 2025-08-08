@@ -12,20 +12,34 @@
             padding: 0;
             text-align: center;
         }
-
         header {
-            background-color: #cc8c34;
-            color: white;
-            padding: 20px;
-            text-align: right;
-        }
+    background-color: #cc8c34;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
 
-        header img {
-            max-width: 20%;
-            height: auto;
-            float: left;
-            margin-right: 15px;
-        }
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header-container img {
+    flex: 0 0 30%;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.header-container h1 {
+    flex: 1;
+    font-size: 1.5em; /* aligné avec h2 */
+    margin: 0;
+    word-break: break-word;
+}
+
 
         main {
             padding: 30px 15px;
@@ -103,13 +117,32 @@
             color: white;
         }
     </style>
+    @media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-container img,
+    .header-container h1 {
+        flex: unset;
+        width: 100%;
+    }
+
+    .header-container img {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
-        <h1>Dons > 40€ depuis la Belgique 🇧🇪</h1>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo">
+            <h1>Dons > 40€ depuis la Belgique 🇧🇪</h1>
+        </div>
     </header>
-
     <main>
         <div class="columns">
             <!-- Colonne 1 : Infos bancaires -->
