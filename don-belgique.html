@@ -20,9 +20,16 @@
             text-align: right;
         }
 
+        header img {
+            max-width: 20%;
+            height: auto;
+            float: left;
+            margin-right: 15px;
+        }
+
         main {
             padding: 30px 15px;
-            max-width: 700px;
+            max-width: 1200px;
             margin: auto;
             text-align: left;
         }
@@ -31,16 +38,36 @@
             color: #cc8c34;
         }
 
-        .info {
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .column {
             background-color: white;
             padding: 20px;
             border-left: 5px solid #cc8c34;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-radius: 5px;
+            flex: 1;
+            min-width: 300px;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            height: 500px;
         }
 
         p {
             margin: 10px 0;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         footer {
@@ -52,12 +79,12 @@
 
         a.btn {
             display: inline-block;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 20px;
             background-color: #fde9d8;
             color: #f79647;
             padding: 10px 20px;
             border-radius: 5px;
+            text-decoration: none;
             transition: background-color 0.3s;
         }
 
@@ -69,26 +96,44 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" style="max-width: 20%; height: auto; float: left; margin-right: 15px;">
+        <img src="logo.png" alt="Logo">
         <h1>Dons > 40€ depuis la Belgique 🇧🇪</h1>
     </header>
 
     <main>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h2 style="margin: 0;">Informations bancaires</h2>
-            <a href="defiscalisation-belgique.html" class="btn">Infos pour déduction fiscale</a>
+        <div class="columns">
+            <!-- Colonne 1 : Infos bancaires -->
+            <div class="column">
+                <h2>Informations bancaires</h2>
+                <p><strong>Titulaire du compte :</strong> Fondation Roi Baudouin</p>
+                <p><strong>Banque :</strong> BNP Paribas Fortis</p>
+                <p><strong>Adresse :</strong> Montagne du Parc 3 – 1000 Bruxelles</p>
+                <p><strong>IBAN :</strong> BE10 0000 0000 0404</p>
+                <p><strong>BIC :</strong> GEBABEBB</p>
+                <p><strong>Mention pour la Fondation :</strong> TGE – FR – Greenwheel</p>
+            </div>
+
+            <!-- Colonne 2 : Google Form -->
+            <div class="column">
+                <h2>Formulaire à remplir</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenCdYLOrt0ADskl3ukDpEmuJ5WdzULOjBY92xgQao4BxV78w/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+            </div>
+
+            <!-- Colonne 3 : Infos fiscales -->
+            <div class="column">
+                <h2>Attestation fiscale</h2>
+                <p>Les dons de plus de 40 € versés à la Fondation Roi Baudouin donnent droit à une attestation fiscale en Belgique. 5% de frais seront retenus par la Fondation.</p>
+                <p>Pour recevoir cette attestation :</p>
+                <ul>
+                    <li>Indiquez clairement votre adresse postale lors du virement bancaire.</li>
+                    <li>Assurez-vous que le nom utilisé correspond à celui qui apparaîtra sur l'attestation.</li>
+                    <li>La Fondation enverra automatiquement le document en février 2026.</li>
+                </ul>
+                <p>En cas de doute, vous pouvez contacter directement la <a href="mailto:tge@kbs-frb.be?subject=Demande%20attestation%20fiscale">Fondation</a> ou Greenwheel.</p>
+            </div>
         </div>
-        <div class="info">
-            <p><strong>Titulaire du compte :</strong> Fondation Roi Baudouin</p>
-            <p><strong>Banque :</strong> BNP Paribas Fortis</p>
-            <p><strong>Adresse :</strong> Montagne du Parc 3 – 1000 Bruxelles</p>
-            <!-- <p><strong>Numéro de compte :</strong> 000-0000004-04</p> -->
-            <p><strong>IBAN :</strong> BE10 0000 0000 0404</p>
-            <p><strong>BIC :</strong> GEBABEBB</p>
-            <p><strong>Mention pour la Fondation :</strong> TGE – FR – Greenwheel</p>
-        </div>
+
         <a href="index.html" class="btn">← Retour à l'accueil</a>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenCdYLOrt0ADskl3ukDpEmuJ5WdzULOjBY92xgQao4BxV78w/viewform?embedded=true" width="640" height="447" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
     </main>
 
     <footer>
