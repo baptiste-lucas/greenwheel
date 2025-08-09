@@ -13,34 +13,34 @@
             text-align: center;
         }
         header {
-    background-color: #cc8c34;
-    color: white;
-    padding: 20px;
-    text-align: left;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.header-container img {
-    flex: 0 0 30%;
-    max-width: 100%;
-    height: auto;
-    padding: 10px;
-}
-
-.header-container h1 {
-    flex: 1;
-    font-size: 1.5em; /* aligné avec h2 */
-    margin: 0;
-    word-break: break-word;
-}
-
-
+            background-color: #cc8c34;
+            color: white;
+            padding: 20px;
+            text-align: right; 
+        }
+        
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        
+        .header-container img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .header-container h1 {
+            flex: 1;
+            font-size: 1.8em;
+            margin: 0;
+            word-break: break-word;
+            text-align: right;
+        }
+        
         main {
             padding: 30px 15px;
             max-width: 1200px;
@@ -117,30 +117,28 @@
             color: white;
         }
         
-    @media (max-width: 600px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-container img,
-    .header-container h1 {
-        flex: unset;
-        width: 100%;
-    }
-
-    .header-container img {
-        max-width: 50%;
-        margin: 0 auto;
-    }
-}
+        @media (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .header-container h1 {
+                text-align: center;
+                font-size: 1.5em;
+            }
+        
+            .header-container img {
+                max-width: 50%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
             <img src="logo.png" alt="Logo">
-            <h1>Dons > 40€ depuis la Belgique 🇧🇪</h1>
+            <h1>Soutenez notre projet avec le don de votre choix !</h1>
         </div>
     </header>
     <main>
@@ -172,7 +170,11 @@
                     <li>La Fondation enverra automatiquement le document en février 2026.</li>
                 </ul>
                 <p>En cas de doute, vous pouvez contacter directement la <a href="mailto:tge@kbs-frb.be?subject=Demande%20attestation%20fiscale">Fondation</a> ou Greenwheel.</p>
+            
+                <p><strong>TLDR :</strong> Le taux de la déduction fiscale pour vos dons pourrait passer de 45 % à 30 %.<br>
+                En Belgique, le projet de loi "Dispositions diverses" sera voté en octobre 2025. Ce texte introduit une réduction du taux de la déduction fiscale pour les dons, de 45 % à 30 % avec un effet rétroactif sur tous les dons faits à partir du 1ᵉʳ janvier 2025.</p>
             </div>
+
         </div>
 
         <a href="index.html" class="btn">← Retour à l'accueil</a>
