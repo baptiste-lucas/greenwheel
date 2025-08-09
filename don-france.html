@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Faire un don depuis la France</title>
+  <title>Don depuis la 🇫🇷</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
@@ -23,16 +23,40 @@
       padding: 20px;
     }
 
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .header-container img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .header-container h1 {
+      flex: 1;
+      font-size: 1.8em;
+      margin: 0;
+      word-break: break-word;
+      text-align: right;
+    }
+
     main {
       flex: 1;
       padding: 30px 15px;
       max-width: 800px;
       margin: auto;
+      text-align: left;
     }
 
-    h1 {
-      font-size: 1.8em;
+    h2 {
       color: #cc8c34;
+      font-size: 1.4em;
+      margin-top: 30px;
     }
 
     .warning, .note {
@@ -41,7 +65,6 @@
       border-left: 5px solid #cc8c34;
       padding: 15px;
       margin-bottom: 25px;
-      text-align: left;
       border-radius: 5px;
     }
 
@@ -57,7 +80,7 @@
       background-color: #cc8c34;
       color: white;
       padding: 12px 24px;
-      margin: 20px 10px 0;
+      margin: 20px 10px 30px;
       border-radius: 5px;
       font-weight: bold;
       text-decoration: none;
@@ -70,45 +93,98 @@
     }
 
     footer {
-      text-align: center;
       font-size: 0.8em;
       color: #777;
+      text-align: center;
       padding: 20px;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .social-icons a {
+      color: #777;
+      margin: 0 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #cc8c34;
+    }
+
+    @media (max-width: 600px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-container h1 {
+        text-align: center;
+        font-size: 1.5em;
+      }
+
+      .header-container img {
+        max-width: 50%;
+      }
+
+      main {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Faire un don depuis la 🇫🇷</h1>
+    <div class="header-container">
+      <img src="logo.png" alt="Logo Greenwheel">
+      <h1>Don depuis la 🇫🇷</h1>
+    </div>
   </header>
 
   <main>
-    <div class="warning">
-      <strong>🔴 Important :</strong> Les dons sur HelloAsso sont <strong>sans frais obligatoires</strong>. 
-      Mais par défaut, la plateforme propose une contribution au fonctionnement.
-      <br>➡️ Vous pouvez la modifier et mettre <strong>0 €</strong> en cliquant sur <strong>"Modifier ma contribution"</strong>.
-      <br><br>
-      <img src="modification_don.png" alt="Explication contribution HelloAsso">
-    </div>
-
-    <div class="note">
-      <strong>📩 Reçu fiscal :</strong> Si vous souhaitez recevoir <u>personnellement</u> un reçu fiscal,
-      vous devez <strong>créer un compte HelloAsso</strong> ou vous connecter avant de faire votre don.
-      <br><br>
-      Sinon, seul Greenwheel recevra ce reçu automatiquement.
-    </div>
-
     <a href="https://www.helloasso.com/associations/greenwheel/collectes/deviens-acteur-de-l-electrification-au-benin" target="_blank" class="btn">
       🎁 Cagnotte en ligne
     </a>
 
-    <br>
+    <div class="note">
+      <strong>📩 Reçu fiscal :</strong><br>
+      Si vous souhaitez recevoir <u>personnellement</u> votre reçu fiscal, vous devez
+      <strong>créer un compte HelloAsso</strong> ou vous connecter avant d’effectuer votre don.
+      <br><br>
+      Sinon, Greenwheel reçoit automatiquement le reçu (et vous ne pourrez pas y accéder).
+    </div>
+
+    <div class="warning">
+      <strong>🔴 Important :</strong> Les dons sur HelloAsso sont <strong>sans frais obligatoires</strong>. 
+      <br>➡️ Par défaut, HelloAsso propose une contribution à son fonctionnement.
+      <br>Vous pouvez la modifier et mettre <strong>0 €</strong> en cliquant sur <strong>"Modifier ma contribution"</strong>.
+      <br><br>
+      <img src="modification_don.png" alt="Explication contribution HelloAsso">
+    </div>
+
     <a href="index.html" class="btn">← Retour à l'accueil</a>
   </main>
 
   <footer>
-    &copy; 2025 - Greenwheel
+    <div class="footer-content">
+      <span>&copy; 2025 - Greenwheel</span>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/greenwheel-association/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/greenwheel_africa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:greenwheel.africa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+33673973558" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
   </footer>
 
 </body>
