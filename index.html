@@ -143,6 +143,62 @@
             color: #cc8c34;
         }
 
+        .flyer-preview {
+            margin: 30px auto 10px;
+            text-align: center;
+            position: relative;
+            max-width: 200px;
+        }
+        
+        .flyer-link {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .flyer-center {
+            width: 100px;
+            z-index: 2;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .flyer-side {
+            position: absolute;
+            top: 0;
+            width: 80px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .flyer-side.left {
+            left: -85px;
+            transform: rotate(-5deg);
+        }
+        
+        .flyer-side.right {
+            right: -85px;
+            transform: rotate(5deg);
+        }
+        
+        .flyer-link:hover .flyer-side {
+            opacity: 1;
+        }
+        
+        .flyer-caption {
+            font-size: 0.75em;
+            color: #555;
+            margin-top: 8px;
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
         @media (max-width: 600px) {
             .header-container {
                 flex-direction: column;
@@ -166,11 +222,20 @@
             <a href="index.html">
                 <img src="logo.png" alt="Logo">
             </a>
-            <h1>Soutenez notre <a href="flyer.pdf" target="_blank" style="color: white; text-decoration: underline;">projet</a> avec le don de votre choix !</h1>
+            <h1>Soutenez notre <a href="flyer/flyer.pdf" target="_blank" style="color: white; text-decoration: underline;">projet</a> avec le don de votre choix !</h1>
         </div>
     </header>
 
     <main>
+        <div class="flyer-preview">
+            <a href="flyer/flyer.pdf" target="_blank" class="flyer-link" aria-label="Voir le flyer complet (PDF)">
+                <img src="flyer/flyer-page2.png" alt="Flyer page 2" class="flyer-side left">
+                <img src="flyer/flyer-page1.png" alt="Flyer page 1" class="flyer-center">
+                <img src="flyer/flyer-page3.png" alt="Flyer page 3" class="flyer-side right">
+            </a>
+            <div class="flyer-caption">📄 Survolez pour voir les autres pages – Cliquez pour ouvrir le flyer complet</div>
+        </div>
+
         <div class="note">
             Les paliers sont donnés à titre indicatif, vous pouvez donner la somme de votre choix.
         </div>
@@ -186,13 +251,6 @@
             <li><strong>27000 €</strong> – ⚡ <em>Générateur de rêve :</em> Vous faites briller la lumière pour tout le monde</li>
             <li><strong>Don libre</strong> – 🙏 Dans tous les cas, vous nous donnez le smile</li>
         </ul>
-
-        <div style="margin: 20px auto; max-width: 120px;">
-            <a href="flyer.pdf" target="_blank">
-                <img src="flyer-thumb.png" alt="Aperçu du flyer" style="width: 100%; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-            </a>
-            <div style="font-size: 0.75em; margin-top: 5px;">📄 Voir le flyer</div>
-        </div>
 
         <div class="btn-container">
             <a href="don-france.html" class="btn">Je fais un don depuis la 🇫🇷</a>
