@@ -150,26 +150,42 @@
     .lang-switch {
       font-size: 1.5em;
       text-decoration: none;
-      margin-left: 10px;
+      margin-right: 5px;
       transition: transform 0.2s;
     }
     
     .lang-switch:hover {
       transform: scale(1.2);
     }
-  </style>
+   
+    @media (min-width: 768px) {
+     .header-container {
+       justify-content: flex-start;
+     }
+     .lang-switch {
+       margin-right: auto;
+     }
+     .header-container img {
+       margin: 0 auto;
+     }
+     .header-container h1 {
+       text-align: right;
+       margin-left: auto;
+     }
+   }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <a href="index_en.html">
-        <img src="logo.png" alt="Greenwheel Logo">
-      </a>
-      <h1>Donation < €40 from 🇧🇪</h1>
-      <a href="pdon_belgique.html" class="lang-switch" title="Version française">
-        🇫🇷
-      </a>
-    </div>
+    <header>
+        <div class="header-container">
+            <a href="pdon-belgique.html" class="lang-switch" title="Version française">
+                🇫🇷
+            </a>
+            <a href="index_en.html">
+              <img src="logo.png" alt="Greenwheel Logo">
+            </a>
+            <h1>Donation < €40 from 🇧🇪</h1>
+        </div>
   </header>
 
   <main>
