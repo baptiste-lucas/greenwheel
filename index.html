@@ -142,9 +142,9 @@
         .social-icons a:hover {
             color: #cc8c34;
         }
-
-        .flyer-preview {
-            margin: 15px auto 10px;
+        
+         .flyer-preview {
+            margin: 10px auto 10px;
             text-align: center;
             position: relative;
             max-width: 200px;
@@ -169,10 +169,11 @@
             top: 0;
             width: 80px;
             opacity: 0;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            pointer-events: none; 
         }
         
         .flyer-side.left {
@@ -185,7 +186,7 @@
             transform: rotate(5deg);
         }
         
-        .flyer-link:hover .flyer-side {
+        .flyer-link.show-sides .flyer-side {
             opacity: 1;
         }
 
@@ -267,5 +268,30 @@
             </div>
         </div>
     </footer>
+    <script>
+        let flyerTriggered = false;
+    
+        const triggerFlyer = () => {
+            if (!flyerTriggered) {
+                flyerTriggered = true;
+                const flyerLink = document.querySelector('.flyer-link');
+                if (flyerLink) {
+                    flyerLink.classList.add('show-sides');
+                }
+            }
+        };
+    
+        // Déclenchement dès qu’on scroll de 1 pixel ou plus
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                triggerFlyer();
+            }
+        }, { passive: true });
+    
+        // Sécurité supplémentaire : au toucher sur mobile
+        window.addEventListener('touchmove', () => {
+            triggerFlyer();
+        }, { passive: true });
+    </script>
 </body>
 </html>
