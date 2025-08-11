@@ -169,27 +169,36 @@
             top: 0;
             width: 80px;
             opacity: 0;
-            transition: all 0.4s ease;
+            transform: translateX(0) scale(0.9);
+            transition: transform 0.5s ease, opacity 0.5s ease;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            pointer-events: none; 
+            pointer-events: none;
         }
         
         .flyer-side.left {
-            left: -85px;
-            transform: rotate(-5deg);
+            left: 0;
         }
         
         .flyer-side.right {
-            right: -85px;
-            transform: rotate(5deg);
-        }
-        
-        .flyer-link.show-sides .flyer-side {
-            opacity: 1;
+            right: 0;
         }
 
+        .flyer-link.show-sides .flyer-side {
+            pointer-events: auto; 
+        }
+        
+        .flyer-link.show-sides .flyer-side.left {
+            opacity: 1;
+            transform: translateX(-85px) rotate(-5deg) scale(1);
+        }
+        
+        .flyer-link.show-sides .flyer-side.right {
+            opacity: 1;
+            transform: translateX(85px) rotate(5deg) scale(1);
+        }
+        
         @media (max-width: 600px) {
             .header-container {
                 flex-direction: column;
