@@ -203,6 +203,14 @@
         }
 
         @media (min-width: 768px) {
+            .don-pack-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+            }
+        
             .don-pack-grid {
                 display: flex;
                 flex-wrap: nowrap;
@@ -210,14 +218,29 @@
                 gap: 20px;
                 padding-bottom: 10px;
                 scroll-snap-type: x mandatory;
-                width: 75vw; 
-                max-witdh: none;
-                margin: 0 auto; /* centré */
+                width: 75vw;            /* 75% de l’écran */
+                max-width: none;
+                margin: 0 auto;         /* centrage */
+                scroll-behavior: smooth; /* pour un scroll fluide */
             }
         
             .don-pack {
                 flex: 0 0 220px;
                 scroll-snap-align: start;
+            }
+        
+            .scroll-btn {
+                background: none;
+                border: none;
+                font-size: 2em;
+                cursor: pointer;
+                color: #cc8c34;
+                padding: 5px 10px;
+                transition: color 0.2s;
+            }
+        
+            .scroll-btn:hover {
+                color: #f79647;
             }
         }
 
@@ -301,15 +324,19 @@
         </div>
 
         <div class="don-section">
-            <div class="don-pack-grid">
-                <div class="don-pack"><h3>10 €</h3><p>📰 <strong>Pack élémentaire</strong><br>Newsletter hebdomadaire exclusive et le smile garanti 😊</p></div>
-                <div class="don-pack"><h3>20 €</h3><p>🔴🎥 <strong>Info en live</strong><br>Accès à un groupe WhatsApp privé pour suivre l’aventure en direct</p></div>
-                <div class="don-pack"><h3>50 €</h3><p>🚗 <strong>Tête d’affiche</strong><br>Votre photo sur notre voiture, embarquez avec nous sur les routes du Bénin</p></div>
-                <div class="don-pack"><h3>100 €</h3><p>✉️ <strong>Carte postale express</strong><br>Une carte postale écrite par un bénéficiaire</p></div>
-                <div class="don-pack"><h3>200 €</h3><p>🎁 <strong>Surprise sous le soleil</strong><br>Cadeau surprise + On pense à vous chaque jour</p></div>
-                <div class="don-pack"><h3>300 €</h3><p>🧠 <strong>Dans notre mémoire</strong><br>Votre nom gravé dans nos esprits pour toujours</p></div>
-                <div class="don-pack"><h3>1000 €</h3><p>🌌 <strong>The Sky is the Limit</strong><br>Vous devenez officiellement une légende de l’électrification</p></div>
-                <div class="don-pack"><h3>27000 €</h3><p>⚡ <strong>Générateur de rêve</strong><br>Vous faites briller la lumière pour tout le monde</p></div>
+            <div class="don-pack-wrapper">
+                <button class="scroll-btn left" aria-label="Défiler à gauche">&#10094;</button>
+                <div class="don-pack-grid">
+                    <div class="don-pack"><h3>10€</h3><p>📰 <strong>Pack élémentaire</strong><br>Newsletter hebdomadaire exclusive et le smile garanti 😊</p></div>
+                    <div class="don-pack"><h3>20€</h3><p>🔴🎥 <strong>Info en live</strong><br>Accès à un groupe WhatsApp privé pour suivre l’aventure en direct</p></div>
+                    <div class="don-pack"><h3>50€</h3><p>🚗 <strong>Tête d’affiche</strong><br>Votre photo sur notre voiture, embarquez avec nous sur les routes du Bénin</p></div>
+                    <div class="don-pack"><h3>100€</h3><p>✉️ <strong>Carte postale express</strong><br>Une carte postale écrite par un bénéficiaire</p></div>
+                    <div class="don-pack"><h3>200€</h3><p>🎁 <strong>Surprise sous le soleil</strong><br>Cadeau surprise + On pense à vous chaque jour</p></div>
+                    <div class="don-pack"><h3>300€</h3><p>🧠 <strong>Dans notre mémoire</strong><br>Votre nom gravé dans nos esprits pour toujours</p></div>
+                    <div class="don-pack"><h3>1000€</h3><p>🌌 <strong>The Sky is the Limit</strong><br>Vous devenez officiellement une légende de l’électrification</p></div>
+                    <div class="don-pack"><h3>27000€</h3><p>⚡ <strong>Générateur de rêve</strong><br>Vous faites briller la lumière pour tout le monde</p></div>
+                </div>
+                <button class="scroll-btn right" aria-label="Défiler à droite">&#10095;</button>
             </div>
         
             <!-- Boutons -->
@@ -341,21 +368,23 @@
         </div>
     </footer>
     <script>
-    window.addEventListener('load', () => {
-        if (window.innerWidth >= 768) {
-            const grid = document.querySelector('.don-pack-grid');
-            if (grid) {
-                requestAnimationFrame(() => { // attend que le layout soit prêt
-                    grid.scrollTo({
-                        left: 80, // léger décalage
-                        behavior: 'smooth'
-                    });
-                });
-            }
-        }
+    document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.querySelector('.don-pack-grid');
+        const leftBtn = document.querySelector('.scroll-btn.left');
+        const rightBtn = document.querySelector('.scroll-btn.right');
+    
+        const scrollAmount = 240; // largeur approximative d’un pack + gap
+    
+        leftBtn.addEventListener('click', () => {
+            grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    
+        rightBtn.addEventListener('click', () => {
+            grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
     });
     </script>
-    <script>
+    <!--<script>
         let flyerTriggered = false;
     
         const triggerFlyer = () => {
@@ -379,6 +408,6 @@
         window.addEventListener('touchmove', () => {
             triggerFlyer();
         }, { passive: true });
-    </script>
+    </script>-->
 </body>
 </html>
