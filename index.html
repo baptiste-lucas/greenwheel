@@ -165,24 +165,19 @@
         
          .don-section {
             margin-top: 30px;
-        }
-        
-        /* Packs */
-        .don-pack-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Mobile */
-            gap: 20px;
             padding: 0 10px;
         }
         
-        @media (min-width: 1024px) {
-            .don-pack-grid {
-                grid-template-columns: repeat(8, 1fr); /* Desktop: 8 sur une ligne */
-                overflow-x: auto;
-            }
+        .don-pack-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 10px;
+            scroll-snap-type: x mandatory;
         }
         
         .don-pack {
+            flex: 0 0 220px; /* largeur fixe pour tous */
             background-color: #fde9d8;
             color: #333;
             border-radius: 10px;
@@ -190,6 +185,7 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            scroll-snap-align: start;
         }
         
         .don-pack:hover {
@@ -234,9 +230,7 @@
             }
         
             .btn {
-                width: auto;
-                min-width: 200px;
-                max-width: none;
+                width: 260px;
             }
         }
         
