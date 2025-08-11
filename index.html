@@ -202,16 +202,16 @@
             line-height: 1.4;
         }
 
-        @media (min-width: 768) {
-          .don-pack-grid {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 20px;
-            padding-bottom: 10px;
-            scroll-snap-type: x mandatory;
-            width: 95vw; 
-            margin: 0 auto;
+        @media (min-width: 768px) {
+            .don-pack-grid {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 20px;
+                padding-bottom: 10px;
+                scroll-snap-type: x mandatory;
+                width: 75%; /* au lieu de 95vw */
+                margin: 0 auto; /* centré */
             }
         
             .don-pack {
