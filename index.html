@@ -169,15 +169,13 @@
         }
         
         .don-pack-grid {
-            display: flex;
-            overflow-x: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             padding-bottom: 10px;
-            scroll-snap-type: x mandatory;
         }
         
         .don-pack {
-            flex: 0 0 220px; /* largeur fixe pour tous */
             background-color: #fde9d8;
             color: #333;
             border-radius: 10px;
@@ -185,7 +183,6 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            scroll-snap-align: start;
         }
         
         .don-pack:hover {
@@ -204,16 +201,24 @@
             margin: 0;
             line-height: 1.4;
         }
+
+        @media (min-width: 1024px) {
+            .don-pack-grid {
+                display: flex;
+                overflow-x: auto;
+                gap: 20px;
+                scroll-snap-type: x mandatory;
+                padding-bottom: 15px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
         
-        /* Don libre */
-        .don-libre {
-            margin: 30px auto 10px;
-            font-weight: bold;
-            color: #cc8c34;
-            font-size: 1em;
-            text-align: center;
+            .don-pack {
+                flex: 0 0 220px;
+                scroll-snap-align: start;
+            }
         }
-        
+
         /* Boutons */
         .btn-container {
             display: flex;
@@ -289,7 +294,7 @@
         </div>
 
         <div class="note">
-            Les paliers sont donnés à titre indicatif, vous pouvez donner la somme de votre choix.
+            🙏 Les paliers sont donnés à titre indicatif, vous pouvez donner la somme de votre choix. 🙏
         </div>
 
         <div class="don-section">
@@ -302,11 +307,6 @@
                 <div class="don-pack"><h3>300 €</h3><p>🧠 <strong>Dans notre mémoire</strong><br>Votre nom gravé dans nos esprits pour toujours</p></div>
                 <div class="don-pack"><h3>1000 €</h3><p>🌌 <strong>The Sky is the Limit</strong><br>Vous devenez officiellement une légende de l’électrification</p></div>
                 <div class="don-pack"><h3>27000 €</h3><p>⚡ <strong>Générateur de rêve</strong><br>Vous faites briller la lumière pour tout le monde</p></div>
-            </div>
-        
-            <!-- Don libre -->
-            <div class="don-libre">
-                🙏 <strong>Don libre</strong> – Dans tous les cas, vous nous donnez le smile 💚
             </div>
         
             <!-- Boutons -->
@@ -337,6 +337,20 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Scroll automatique horizontal de la grille sur desktop
+        window.addEventListener('load', () => {
+            if (window.innerWidth >= 1024) {
+                const grid = document.querySelector('.don-pack-grid');
+                if (grid) {
+                    grid.scrollTo({
+                        left: 80, // légère mise en valeur
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    </script>
     <script>
         let flyerTriggered = false;
     
