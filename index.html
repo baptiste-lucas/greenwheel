@@ -198,6 +198,41 @@
             opacity: 1;
             transform: translateX(85px) rotate(5deg) scale(1);
         }
+
+        .don-pack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        
+        .don-pack {
+            background-color: #fde9d8;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .don-pack:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .don-pack h3 {
+            color: #cc8c34;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        .don-pack p {
+            font-size: 0.9em;
+            margin: 0;
+            line-height: 1.4;
+        }
         
         @media (max-width: 600px) {
             .header-container {
@@ -239,17 +274,43 @@
             Les paliers sont donnés à titre indicatif, vous pouvez donner la somme de votre choix.
         </div>
 
-        <ul>
-            <li><strong>10 €</strong> – 📰 <em>Pack élémentaire :</em> Newsletter hebdomadaire exclusive et le smile garanti 😊</li>
-            <li><strong>20 €</strong> – 🔴🎥 <em>Info en live :</em> Accès à un groupe WhatsApp privé pour suivre l’aventure en direct</li>
-            <li><strong>50 €</strong> – 🚗 <em>Tête d’affiche :</em> Votre photo sur notre voiture, embarquez avec nous sur les routes du Bénin</li>
-            <li><strong>100 €</strong> – ✉️ <em>Carte postale express :</em> Une carte postale écrite par un bénéficiaire + toutes les contreparties précédentes</li>
-            <li><strong>200 €</strong> – 🎁 <em>Surprise sous le soleil :</em> Cadeau surprise + On pense à vous chaque jour</li>
-            <li><strong>300 €</strong> – 🧠 <em>Dans notre mémoire :</em> Votre nom gravé dans nos esprits pour toujours</li>
-            <li><strong>1000 €</strong> – 🌌 <em>The Sky is the Limit :</em> Vous devenez officiellement une légende de l’électrification</li>
-            <li><strong>27000 €</strong> – ⚡ <em>Générateur de rêve :</em> Vous faites briller la lumière pour tout le monde</li>
-            <li><strong>Don libre</strong> – 🙏 Dans tous les cas, vous nous donnez le smile</li>
-        </ul>
+        <div class="don-pack-grid">
+            <div class="don-pack">
+                <h3>10€</h3>
+                <p>📰 <strong>Pack élémentaire</strong><br>Newsletter hebdomadaire exclusive et le smile garanti 😊</p>
+            </div>
+            <div class="don-pack">
+                <h3>20€</h3>
+                <p>🔴🎥 <strong>Info en live</strong><br>Accès à un groupe WhatsApp privé pour suivre l’aventure en direct</p>
+            </div>
+            <div class="don-pack">
+                <h3>50€</h3>
+                <p>🚗 <strong>Tête d’affiche</strong><br>Votre photo sur notre voiture, embarquez avec nous sur les routes du Bénin!</p>
+            </div>
+            <div class="don-pack">
+                <h3>100€</h3>
+                <p>✉️ <strong>Carte postale express</strong><br>Une carte postale écrite par un bénéficiaire</p>
+            </div>
+            <div class="don-pack">
+                <h3>200€</h3>
+                <p>🎁 <strong>Surprise sous le soleil</strong><br>Cadeau surprise + On pense à vous chaque jour</p>
+            </div>
+            <div class="don-pack">
+                <h3>300€</h3>
+                <p>🧠 <strong>Dans notre mémoire</strong><br>Votre nom gravé dans nos esprits pour toujours</p>
+            </div>
+            <div class="don-pack">
+                <h3>1000€</h3>
+                <p>🌌 <strong>The Sky is the Limit</strong><br>Vous devenez officiellement une légende de l’électrification</p>
+            </div>
+            <div class="don-pack">
+                <h3>27000€</h3>
+                <p>⚡ <strong>Générateur de rêve</strong><br>Vous faites carrément briller la lumière pour tout le monde</p>
+            </div>
+        </div>
+        <div class="don-pack" style="max-width: 400px; margin: 20px auto;">
+            🙏 <strong>Don libre</strong> – Dans tous les cas, vous nous donnez le smile 💚
+        </div>
 
         <div class="btn-container">
             <a href="don-france.html" class="btn">Je fais un don depuis la 🇫🇷</a>
