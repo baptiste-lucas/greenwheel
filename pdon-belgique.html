@@ -17,12 +17,6 @@
       min-height: 100vh;
     }
 
-    header {
-      background-color: #cc8c34;
-      color: white;
-      padding: 15px;
-    }
-
     .header-container {
       display: flex;
       align-items: center;
@@ -31,21 +25,49 @@
       margin: 0 auto;
       gap: 20px;
     }
-
+    
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
     .header-container img {
       max-width: 150px;
       height: auto;
-      border: none; 
-      border-radius: 0; 
+      border: none;
+      border-radius: 0;
       margin-top: 0;
     }
     
-    .header-container h1 {
-      flex: 1;
-      font-size: 1.8em;
-      margin: 0;
-      word-break: break-word;
-      text-align: right;
+    .lang-switch {
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    
+    .lang-switch:hover {
+      transform: scale(1.2);
+    }
+    
+    @media (max-width: 600px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .left-header {
+        justify-content: center;
+      }
+    
+      .header-container img {
+        max-width: 50%;
+      }
+    
+      .header-container h1 {
+        text-align: center;
+        font-size: 1.5em;
+      }
     }
 
     main {
@@ -127,52 +149,21 @@
     .social-icons a:hover {
       color: #cc8c34;
     }
-
-    @media (max-width: 600px) {
-      .header-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .header-container h1 {
-        text-align: center;
-        font-size: 1.5em;
-      }
-
-      .header-container img {
-        max-width: 50%;
-      }
-
-      main {
-        text-align: center;
-      }
-    }
-    .lang-switch {
-      font-size: 1.5em;
-      text-decoration: none;
-      margin-left: 10px;
-      transition: transform 0.2s;
-    }
-    
-    .lang-switch:hover {
-      transform: scale(1.2);
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="header-container">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo Greenwheel">
-      </a>
+      <div class="left-header">
+        <a href="pdon-belgique_en.html" class="lang-switch" title="English version">🇬🇧</a>
+        <a href="index.html">
+          <img src="logo.png" alt="Logo Greenwheel">
+        </a>
+      </div>
       <h1>Don < 40€ depuis la 🇧🇪</h1>
-      <a href="pdon_belgique_en.html" class="lang-switch" title="English version">
-        🇬🇧
-      </a>
     </div>
   </header>
-
-
+  
   <main>
     <div class="btn-wrapper">
       <a href="https://www.helloasso.com/associations/greenwheel/collectes/deviens-acteur-de-l-electrification-au-benin" class="btn">🎁 Cagnotte HelloAsso ici! 🎁</a>
