@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Greenwheel!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Styles unchanged from the French version */
+        html { min-height: 100%; }
+        body { display: flex; flex-direction: column; min-height: 100vh; margin: 0; padding: 0; font-family: sans-serif; background-color: white; text-align: center; }
+        header { background-color: #cc8c34; color: white; padding: 15px; text-align: right; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; max-width: 1000px; margin: 0 auto; gap: 20px; }
+        .header-container img { max-width: 150px; height: auto; }
+        .header-container h1 { flex: 1; font-size: 1.8em; margin: 0; word-break: break-word; text-align: right; }
+        main { padding: 5px 15px; max-width: 700px; margin: auto; flex: 1; }
+        .note { font-size: 0.9em; background-color: #fde9d8; color: #f79647; font-weight: bold; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        .pre-post-scriptum { color: #f79647; margin-top: 12px; text-decoration: none; font-weight: bold; }
+        .post-scriptum { color: #777; font-size: 0.85em; margin-top: 20px; text-decoration: none; }
+        footer { font-size: 0.8em; color: #777; text-align: center; padding: 10px; }
+        .footer-content { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .social-icons a { color: #777; margin: 0 5px; text-decoration: none; font-size: 1.2em; transition: color 0.3s; }
+        .social-icons a:hover { color: #cc8c34; }
+        .flyer-preview { margin: 10px auto; text-align: center; position: relative; max-width: 300px; }
+        .flyer-link { display: inline-block; position: relative; }
+        .flyer-center { width: 100px; z-index: 2; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .flyer-side { position: absolute; top: 0; width: 80px; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); opacity: 1; pointer-events: auto; }
+        .flyer-side.left { left: 0; transform: translateX(-85px) rotate(-5deg) scale(1); }
+        .flyer-side.right { right: 0; transform: translateX(85px) rotate(5deg) scale(1); }
+        .don-section { margin-top: 30px; padding: 0 10px; }
+        .don-pack-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding-bottom: 10px; }
+        .don-pack { background-color: #fde9d8; color: #333; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .don-pack:hover { transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.15); }
+        .don-pack h3 { color: #cc8c34; margin-bottom: 10px; font-size: 1.3em; }
+        .don-pack p { font-size: 0.9em; margin: 0; line-height: 1.4; }
+        @media (min-width: 768px) {
+            .don-pack-wrapper { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; }
+            .don-pack-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 20px; padding-bottom: 10px; scroll-snap-type: x mandatory; width: 75vw; max-width: none; margin: 0 auto; scroll-behavior: smooth; }
+            .don-pack { flex: 0 0 220px; scroll-snap-align: start; }
+            .scroll-btn { background: none; border: none; font-size: 2em; cursor: pointer; color: #cc8c34; padding: 5px 10px; transition: color 0.2s; }
+            .scroll-btn:hover { color: #f79647; }
+        }
+        .btn-container { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 15px; }
+        @media (min-width: 768px) { .btn-container { flex-direction: row; justify-content: center; } .btn { width: 260px; } }
+        .btn { display: inline-block; background-color: #cc8c34; color: white; padding: 12px 18px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 75vw; transition: background-color 0.3s; text-align: center; }
+        .btn:hover { background-color: #fde9d8; color: #f79647; }
+        @media (max-width: 600px) {
+            .scroll-btn { display: none; }
+            .header-container { flex-direction: column; text-align: center; }
+            .header-container h1 { text-align: center; font-size: 1.5em; }
+            .header-container img { max-width: 50%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index_en.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+            <h1>Support our <a href="flyer/flyer.pdf" target="_blank" style="color: white; text-decoration: underline;">project</a> with the donation of your choice!</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="flyer-preview">
+            <a href="flyer/flyer.pdf" target="_blank" class="flyer-link" aria-label="View the full flyer (PDF)">
+                <img src="flyer/flyer-page2.png" alt="Flyer page 2" class="flyer-side left">
+                <img src="flyer/flyer-page1.png" alt="Flyer page 1" class="flyer-center">
+                <img src="flyer/flyer-page3.png" alt="Flyer page 3" class="flyer-side right">
+            </a>
+        </div>
+
+        <div class="note">
+            The tiers are given for reference — you can donate <u>any amount you choose</u>.
+        </div>
+
+        <div class="don-section">
+            <div class="don-pack-wrapper">
+                <button class="scroll-btn left" aria-label="Scroll left">&#10094;</button>
+                <div class="don-pack-grid">
+                    <div class="don-pack"><h3>€10</h3><p>📰 <strong>Basic Pack</strong><br>Exclusive weekly newsletter and a guaranteed smile 😊</p></div>
+                    <div class="don-pack"><h3>€20</h3><p>🔴🎥 <strong>Live Updates</strong><br>Access to a private WhatsApp group to follow the adventure in real time</p></div>
+                    <div class="don-pack"><h3>€50</h3><p>🚗 <strong>On the Spotlight</strong><br>Your photo on our car — ride with us through the roads of Benin</p></div>
+                    <div class="don-pack"><h3>€100</h3><p>✉️ <strong>Express Postcard</strong><br>A postcard written by a beneficiary</p></div>
+                    <div class="don-pack"><h3>€200</h3><p>🎁 <strong>Sunny Surprise</strong><br>Surprise gift + We think of you every day</p></div>
+                    <div class="don-pack"><h3>€300</h3><p>🧠 <strong>In Our Memory</strong><br>Your name engraved in our hearts forever</p></div>
+                    <div class="don-pack"><h3>€1000</h3><p>🌌 <strong>The Sky is the Limit</strong><br>You officially become a legend of electrification</p></div>
+                    <div class="don-pack"><h3>€27000</h3><p>⚡ <strong>Dream Generator</strong><br>You bring light to everyone</p></div>
+                </div>
+                <button class="scroll-btn right" aria-label="Scroll right">&#10095;</button>
+            </div>
+        
+            <div class="btn-container">
+                <a href="don-france_en.html" class="btn">I donate from 🇫🇷 France</a>
+                <a href="pdon-belgique_en.html" class="btn">I donate &lt; €40* from 🇧🇪 Belgium</a>
+                <a href="don-belgique_en.html" class="btn">I donate &gt; €40 from 🇧🇪 Belgium</a>
+            </div>
+        </div>
+
+        <div class="pre-post-scriptum">
+            *Below €40, donations from Belgian tax residents are not tax deductible.
+        </div>
+
+        <div class="post-scriptum">
+            <strong>Note:</strong> HelloAsso takes <strong>no fees</strong> from your donation. You may support the platform with an optional contribution.
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2025 - Greenwheel</span>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/greenwheel-association/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/greenwheel_africa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:greenwheel.africa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+33673973558" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.querySelector('.don-pack-grid');
+            const leftBtn = document.querySelector('.scroll-btn.left');
+            const rightBtn = document.querySelector('.scroll-btn.right');
+            const scrollAmount = 240;
+            leftBtn.addEventListener('click', () => { grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); });
+            rightBtn.addEventListener('click', () => { grid.scrollBy({ left: scrollAmount, behavior: 'smooth' }); });
+        });
+    </script>
+</body>
+</html>
