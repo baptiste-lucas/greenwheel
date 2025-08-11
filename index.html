@@ -107,11 +107,11 @@
             color: #cc8c34;
         }
         
-         .flyer-preview {
-            margin: 10px auto 10px;
+        .flyer-preview {
+            margin: 10px auto;
             text-align: center;
             position: relative;
-            max-width: 200px;
+            max-width: 300px;
         }
         
         .flyer-link {
@@ -124,7 +124,6 @@
             z-index: 2;
             border: 1px solid #ccc;
             border-radius: 4px;
-            transition: transform 0.3s ease;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
@@ -132,34 +131,20 @@
             position: absolute;
             top: 0;
             width: 80px;
-            opacity: 0;
-            transform: translateX(0) scale(0.9);
-            transition: transform 0.5s ease, opacity 0.5s ease;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            pointer-events: none;
+            opacity: 1; /* toujours visible */
+            pointer-events: auto; /* cliquable */
         }
         
         .flyer-side.left {
             left: 0;
+            transform: translateX(-85px) rotate(-5deg) scale(1);
         }
         
         .flyer-side.right {
             right: 0;
-        }
-
-        .flyer-link.show-sides .flyer-side {
-            pointer-events: auto; 
-        }
-        
-        .flyer-link.show-sides .flyer-side.left {
-            opacity: 1;
-            transform: translateX(-85px) rotate(-5deg) scale(1);
-        }
-        
-        .flyer-link.show-sides .flyer-side.right {
-            opacity: 1;
             transform: translateX(85px) rotate(5deg) scale(1);
         }
         
@@ -284,6 +269,10 @@
 
         
         @media (max-width: 600px) {
+            .scroll-btn {
+                display: none;
+            }
+            
             .header-container {
                 flex-direction: column;
                 text-align: center;
@@ -368,46 +357,21 @@
         </div>
     </footer>
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const grid = document.querySelector('.don-pack-grid');
-        const leftBtn = document.querySelector('.scroll-btn.left');
-        const rightBtn = document.querySelector('.scroll-btn.right');
-    
-        const scrollAmount = 240; // largeur approximative d’un pack + gap
-    
-        leftBtn.addEventListener('click', () => {
-            grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.querySelector('.don-pack-grid');
+            const leftBtn = document.querySelector('.scroll-btn.left');
+            const rightBtn = document.querySelector('.scroll-btn.right');
+        
+            const scrollAmount = 240; // largeur approximative d’un pack + gap
+        
+            leftBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        
+            rightBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
         });
-    
-        rightBtn.addEventListener('click', () => {
-            grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
-    });
     </script>
-    <!--<script>
-        let flyerTriggered = false;
-    
-        const triggerFlyer = () => {
-            if (!flyerTriggered) {
-                flyerTriggered = true;
-                const flyerLink = document.querySelector('.flyer-link');
-                if (flyerLink) {
-                    flyerLink.classList.add('show-sides');
-                }
-            }
-        };
-    
-        // Déclenchement dès qu’on scroll de 1 pixel ou plus
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 0) {
-                triggerFlyer();
-            }
-        }, { passive: true });
-    
-        // Sécurité supplémentaire : au toucher sur mobile
-        window.addEventListener('touchmove', () => {
-            triggerFlyer();
-        }, { passive: true });
-    </script>-->
 </body>
 </html>
