@@ -147,17 +147,45 @@
         text-align: center;
       }
     }
-  </style>
+    .lang-switch {
+      font-size: 1.5em;
+      text-decoration: none;
+      margin-right: 5px;
+      transition: transform 0.2s;
+    }
+    
+    .lang-switch:hover {
+      transform: scale(1.2);
+    }
+   
+    @media (min-width: 768px) {
+     .header-container {
+       justify-content: flex-start;
+     }
+     .lang-switch {
+       margin-right: auto;
+     }
+     .header-container img {
+       margin: 0 auto;
+     }
+     .header-container h1 {
+       text-align: right;
+       margin-left: auto;
+     }
+   }
+    </style>
 </head>
 <body>
-
-  <header>
-    <div class="header-container">
-      <a href="index_en.html">
-          <img src="logo.png" alt="Greenwheel Logo">
-      </a>
-      <h1>Donate from 🇫🇷</h1>
-    </div>
+    <header>
+        <div class="header-container">
+            <a href="don-france.html" class="lang-switch" title="Version française">
+                🇫🇷
+            </a>
+            <a href="index_en.html">
+                <img src="logo.png" alt="Greenwheel Logo">
+            </a>
+            <h1>Donate from 🇫🇷</h1>
+        </div>
   </header>
 
   <main>
