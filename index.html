@@ -210,7 +210,8 @@
                 gap: 20px;
                 padding-bottom: 10px;
                 scroll-snap-type: x mandatory;
-                width: 75%; /* au lieu de 95vw */
+                width: 75vw; 
+                max-witdh: none;
                 margin: 0 auto; /* centré */
             }
         
@@ -340,18 +341,19 @@
         </div>
     </footer>
     <script>
-        // Scroll automatique horizontal de la grille sur desktop
-        window.addEventListener('load', () => {
-            if (window.innerWidth >= 1024) {
-                const grid = document.querySelector('.don-pack-grid');
-                if (grid) {
+    window.addEventListener('load', () => {
+        if (window.innerWidth >= 768) {
+            const grid = document.querySelector('.don-pack-grid');
+            if (grid) {
+                requestAnimationFrame(() => { // attend que le layout soit prêt
                     grid.scrollTo({
-                        left: 80, // légère mise en valeur
+                        left: 80, // léger décalage
                         behavior: 'smooth'
                     });
-                }
+                });
             }
-        });
+        }
+    });
     </script>
     <script>
         let flyerTriggered = false;
