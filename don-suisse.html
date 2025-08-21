@@ -68,7 +68,7 @@
             justify-content: space-between;
         }
 
-        .column {
+        .column, .column_form {
             background-color: white;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -76,7 +76,16 @@
             flex: 1;
             min-width: 300px;
             box-sizing: border-box;
+        }
+
+        .column {
             border-left: 5px solid #cc8c34;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            height: 500px;
         }
 
         p {
@@ -188,37 +197,35 @@
 
     <main>
         <div class="columns">
+            <!-- Colonne gauche : Infos bancaires -->
             <div class="column">
-                <h2>3 étapes pour un donateur</h2>
-
-                <h3>1) Information</h3>
-                <p>Merci de nous appeler ou de nous envoyer un e-mail afin que nous puissions vérifier que l’organisation que vous désirez soutenir soit éligible au réseau TGE.</p>
-                <p>Une fois cela confirmé, veuillez nous indiquer :</p>
-                <ul>
-                    <li>Votre nom et adresse de résidence</li>
-                    <li>L’organisation bénéficiaire de votre don et le pays</li>
-                </ul>
-
-                <h3>2) Donation</h3>
-                <p>Merci d’effectuer votre don aux coordonnées suivantes :</p>
+                <h2>Informations bancaires</h2>
+                <br>
                 <p><strong>Titulaire du compte :</strong> Swiss Philanthropy Foundation, Place de Cornavin 2, CH-1201 Genève</p>
                 <p><strong>Banque :</strong> UBS Switzerland AG, rue des Noirettes 35, CH-1227 Carouge</p>
                 <p><strong>Swift/BIC :</strong> UBSWCHZH80A</p>
-                <p><strong>Référence :</strong> TGE – vos coordonnées personnelles – nom de l’organisation bénéficiaire</p>
-
-                <h4>Comptes bancaires disponibles :</h4>
+                <p><strong>Référence :</strong> TGE – vos coordonnées personnelles – Greenwheel</p>
+                
+                <h3>Comptes disponibles</h3>
                 <ul>
-                    <li><strong>CHF :</strong> Cpte 240-672951.01W — IBAN: CH82 0024 0240 6729 5101W</li>
-                    <li><strong>GBP :</strong> Cpte 240-672951.62 — IBAN: CH89 0024 0240 6729 5162E</li>
-                    <li><strong>EUR :</strong> Cpte 240-672951.70U — IBAN: CH76 0024 0240 6729 5170U</li>
-                    <li><strong>USD :</strong> Cpte 240-672951.66R — IBAN: CH93 0024 0240 6729 5166R</li>
+                    <li><strong>CHF :</strong> 240-672951.01W — IBAN: CH82 0024 0240 6729 5101W</li>
+                    <li><strong>GBP :</strong> 240-672951.62 — IBAN: CH89 0024 0240 6729 5162E</li>
+                    <li><strong>EUR :</strong> 240-672951.70U — IBAN: CH76 0024 0240 6729 5170U</li>
+                    <li><strong>USD :</strong> 240-672951.66R — IBAN: CH93 0024 0240 6729 5166R</li>
                 </ul>
+            </div>
 
-                <h3>3) Confirmation</h3>
+            <!-- Colonne milieu : Google Form -->
+            <div class="column_form">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd89zHLKp5rSeTM9OROzZiHs7Aqo8LgUXb8tz0IJq-z4DE9qQ/viewform?embedded=true" frameborder="0">Chargement…</iframe>
+            </div>
+
+            <!-- Colonne droite : Confirmation fiscale -->
+            <div class="column">
+                <h2>Attestation fiscale</h2>
                 <ul>
-                    <li>Vous recevrez une confirmation par e-mail dans les semaines qui suivent (sous réserve que vous ayez transmis votre adresse).</li>
-                    <li>Les donations seront transférées à l’organisation bénéficiaire à la fin de chaque trimestre (sauf en décembre, où elles sont transférées au milieu du mois).</li>
-                    <li>Une attestation de don pour votre déclaration fiscale vous sera envoyée en février de l’année suivant votre donation.</li>
+                    <li>Une confirmation par e-mail vous sera envoyée dans les semaines qui suivent.</li>
+                    <li>Une attestation fiscale vous sera envoyée en février 2026.</li>
                 </ul>
             </div>
         </div>
