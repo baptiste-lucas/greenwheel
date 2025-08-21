@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donations from 🇨🇭</title>
+    <title>Donation from 🇨🇭</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         html, body {
@@ -68,7 +68,7 @@
             justify-content: space-between;
         }
 
-        .column {
+        .column, .column_form {
             background-color: white;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -76,7 +76,16 @@
             flex: 1;
             min-width: 300px;
             box-sizing: border-box;
+        }
+
+        .column {
             border-left: 5px solid #cc8c34;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            height: 500px;
         }
 
         p {
@@ -188,42 +197,40 @@
 
     <main>
         <div class="columns">
+            <!-- Left column: Bank details -->
             <div class="column">
-                <h2>3 steps for a donor</h2>
-
-                <h3>1) Information</h3>
-                <p>Please call us or send us an email so that we can check whether the organisation you wish to support is eligible for the TGE network.</p>
-                <p>Once confirmed, please provide us with:</p>
-                <ul>
-                    <li>Your full name and residential address</li>
-                    <li>The beneficiary organisation of your donation and the country</li>
-                </ul>
-
-                <h3>2) Donation</h3>
-                <p>Please make your donation to the following account details:</p>
-                <p><strong>Account Holder:</strong> Swiss Philanthropy Foundation, Place de Cornavin 2, CH-1201 Geneva</p>
+                <h2>Bank Information</h2>
+                <br>
+                <p><strong>Account holder:</strong> Swiss Philanthropy Foundation, Place de Cornavin 2, CH-1201 Geneva</p>
                 <p><strong>Bank:</strong> UBS Switzerland AG, rue des Noirettes 35, CH-1227 Carouge</p>
                 <p><strong>Swift/BIC:</strong> UBSWCHZH80A</p>
-                <p><strong>Reference:</strong> TGE – your personal details – name of the beneficiary organisation</p>
-
-                <h4>Available bank accounts:</h4>
+                <p><strong>Reference:</strong> TGE – your personal details – Greenwheel</p>
+                
+                <h3>Available accounts</h3>
                 <ul>
-                    <li><strong>CHF:</strong> Acc. 240-672951.01W — IBAN: CH82 0024 0240 6729 5101W</li>
-                    <li><strong>GBP:</strong> Acc. 240-672951.62 — IBAN: CH89 0024 0240 6729 5162E</li>
-                    <li><strong>EUR:</strong> Acc. 240-672951.70U — IBAN: CH76 0024 0240 6729 5170U</li>
-                    <li><strong>USD:</strong> Acc. 240-672951.66R — IBAN: CH93 0024 0240 6729 5166R</li>
+                    <li><strong>CHF:</strong> 240-672951.01W — IBAN: CH82 0024 0240 6729 5101W</li>
+                    <li><strong>GBP:</strong> 240-672951.62 — IBAN: CH89 0024 0240 6729 5162E</li>
+                    <li><strong>EUR:</strong> 240-672951.70U — IBAN: CH76 0024 0240 6729 5170U</li>
+                    <li><strong>USD:</strong> 240-672951.66R — IBAN: CH93 0024 0240 6729 5166R</li>
                 </ul>
+            </div>
 
-                <h3>3) Confirmation</h3>
+            <!-- Middle column: Google Form -->
+            <div class="column_form">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd89zHLKp5rSeTM9OROzZiHs7Aqo8LgUXb8tz0IJq-z4DE9qQ/viewform?embedded=true" frameborder="0">Loading…</iframe>
+            </div>
+
+            <!-- Right column: Tax receipt info -->
+            <div class="column">
+                <h2>Tax Receipt</h2>
                 <ul>
-                    <li>You will receive a confirmation by email in the following weeks (provided that you have given us your address).</li>
-                    <li>Donations are transferred to the beneficiary organisation at the end of each quarter, except in December when they are transferred mid-month.</li>
-                    <li>You will receive a donation receipt for your tax declaration in February of the year following your donation.</li>
+                    <li>A confirmation email will be sent to you in the weeks following your donation.</li>
+                    <li>A tax receipt will be sent to you in February 2026.</li>
                 </ul>
             </div>
         </div>
 
-        <a href="index_en.html" class="btn">← Back to Home</a>
+        <a href="index_en.html" class="btn">← Back to homepage</a>
     </main>
 
     <footer>
